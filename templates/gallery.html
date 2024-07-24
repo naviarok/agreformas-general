@@ -1,0 +1,62 @@
+{% extends 'cover.html' %}
+{% load static %}
+
+
+  {% block head %}
+
+  <title>AGREFORMAS | OUR PHOTO GALLERY</title>
+  
+  {% endblock head %}
+
+
+
+  {% block content %}
+                
+      <section class="py-12 md:py-24 bg-coolGray-50" x-data="{ tab: '', showContent: false }" x-init="tab = $refs.tab1.textContent">
+        <div class="container mx-auto px-4">
+          <div class="mb-20">
+            <div class="inline-flex w-full mx-auto items-start text-center mb-8">
+              <h1 class="font-heading text-3xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-10xl tracking-tighter pt-4">Our Photo Gallery</h1>
+              <span class="block -mb-4 sm:mr-12 lg:mr-8 text-right text-xl sm:text-2xl text-coolGray-600">(9)</span>
+            </div>
+
+          </div>
+          <div class="flex flex-wrap -mx-3 -mb-6">
+            <div :class="{'block': $refs.tab1.textContent == tab || $refs.tab2.textContent == tab, 'hidden': $refs.tab1.textContent != tab &amp;&amp; $refs.tab2.textContent != tab}" class="w-full lg:w-7/12 px-3 mb-6">
+              <div class="relative group block h-112 sm:h-166 rounded-4xl overflow-hidden">
+                <img class="block w-full h-full object-cover" src="{% static 'images/gallery3.jpg' %}" alt="">
+                <div class="absolute bottom-0 left-0 w-full py-10 px-5 xs:pl-10 xs:pe-20">
+                  <div class="relative">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div :class="{'block': $refs.tab1.textContent == tab || $refs.tab2.textContent == tab, 'hidden': $refs.tab1.textContent != tab &amp;&amp; $refs.tab2.textContent != tab}" class="w-full lg:w-5/12 px-3 mb-6">
+              <img class="block w-full h-80 mb-6 rounded-4xl overflow-hidden" src="{% static 'images/gallery6.jpg' %}" alt="">
+              <img class="block w-full h-80 rounded-4xl overflow-hidden" src="{% static 'images/gallery7.jpg' %}" alt="">
+            </div>
+            <div :class="{'block': $refs.tab1.textContent == tab || $refs.tab3.textContent == tab, 'hidden': $refs.tab1.textContent != tab &amp;&amp; $refs.tab3.textContent != tab}" class="w-full lg:w-1/2 px-3 mb-6">
+              <img class="block w-full h-80 rounded-4xl object-cover" src="{% static 'images/gallery1.jpg' %}" alt="">
+            </div>
+            <div :class="{'block': $refs.tab1.textContent == tab || $refs.tab4.textContent == tab, 'hidden': $refs.tab1.textContent != tab &amp;&amp; $refs.tab4.textContent != tab}" class="w-full lg:w-1/2 px-3 mb-6">
+              <img class="block w-full h-80 rounded-4xl object-cover" src="{% static 'images/gallery4.jpg' %}" alt="">
+            </div>
+            <div :class="{'block': $refs.tab1.textContent == tab || $refs.tab3.textContent == tab, 'hidden': $refs.tab1.textContent != tab &amp;&amp; $refs.tab3.textContent != tab}" class="w-full lg:w-1/2 px-3 mb-6">
+              <img class="block w-full h-80 rounded-4xl object-cover" src="{% static 'images/gallery5.jpg' %}" alt="">
+            </div>
+            <div :class="{'block': $refs.tab1.textContent == tab || $refs.tab4.textContent == tab, 'hidden': $refs.tab1.textContent != tab &amp;&amp; $refs.tab4.textContent != tab}" class="w-full lg:w-1/2 px-3 mb-6">
+              <img class="block w-full h-80 rounded-4xl object-cover" src="{% static 'images/gallery9.jpg' %}" alt="">
+            </div>
+            <div :class="{'block': $refs.tab1.textContent == tab || $refs.tab3.textContent == tab, 'hidden': $refs.tab1.textContent != tab &amp;&amp; $refs.tab3.textContent != tab}" class="w-full lg:w-1/2 px-3 mb-6">
+              <img class="block w-full h-80 rounded-4xl object-cover" src="{% static 'images/gallery8.jpg' %}" alt="">
+            </div>
+            <div :class="{'block': $refs.tab1.textContent == tab || $refs.tab4.textContent == tab, 'hidden': $refs.tab1.textContent != tab &amp;&amp; $refs.tab4.textContent != tab}" class="w-full lg:w-1/2 px-3 mb-6">
+              <img class="block w-full h-80 rounded-4xl object-cover" src="{% static 'images/gallery2.jpg' %}" alt="">
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+      {% endblock content %}

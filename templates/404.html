@@ -1,0 +1,39 @@
+{% extends 'cover.html' %}
+
+  {% block head %}
+
+  <title>AGREFORMAS | ERROR 404</title>
+  
+  {% endblock head %}
+
+
+
+      {% block content %}
+                
+      <section class="py-10 bg-coolGray-50">
+        <div class="container mx-auto px-4">
+          <div class="bg-black rounded-4xl overflow-hidden">
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full lg:w-1/2 px-4 self-center">
+                <div class="max-w-md xl:max-w-lg py-24 lg:py-40 px-8 mx-auto">
+                  <span class="inline-block mb-4 py-2 px-3 text-sm text-white leading-none border-1.5 border-white rounded-full transition duration-200">Error 404</span>
+                  <h2 class="font-heading text-5xl sm:text-6xl md:text-8xl xl:text-10xl text-white tracking-tight mb-6">Oops! Page Not Found</h2>
+                  <p class="text-coolGray-100 mb-10">It looks like the page you are looking for doesn't exist or has been moved.</p>
+                  <a class="group inline-flex items-center leading-none font-medium text-white pb-2 border-b-2 border-white" href="{% url 'home' %}">
+                    <span class="mr-4">Back to homepage</span>
+                    <span class="group-hover:rotate-45 transform transition duration-100">
+                      <svg width="11" height="11" viewbox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.5 1.5L1.5 9.5" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M9.5 8.83571V1.5H2.16429" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {% endblock content %}
+

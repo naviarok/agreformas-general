@@ -1,0 +1,383 @@
+{% extends 'cover.html' %}
+{% load static %}
+
+
+  {% block head %}
+
+  <title>AGREFORMAS | RENOVATE YOUR HOME</title>
+
+  {% endblock head %}
+
+
+
+  {% block content %}
+
+      {% if message %}
+
+        {% if message == "failure" %}
+
+          <div class="fixed top-0 left-0 w-full pt-8 pb-10 z-50" style="margin-top: 70px;">
+            <div class="flex px-6 justify-center">
+              <div class="inline-flex py-4 pl-5 pr-6 items-center bg-yellow-100 border border-yellow-300 rounded-3xl">
+                <span class="mr-4">
+                  <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.5013 1.91669C6.2169 1.91669 1.91797 6.21562 1.91797 11.5C1.91797 16.7844 6.2169 21.0834 11.5013 21.0834C16.7857 21.0834 21.0846 16.7844 21.0846 11.5C21.0846 6.21562 16.7857 1.91669 11.5013 1.91669ZM12.1817 16.9721C11.9997 17.1443 11.7502 17.25 11.5013 17.25C11.2519 17.25 11.003 17.1443 10.8209 16.9721C10.6483 16.79 10.543 16.5406 10.543 16.2917C10.543 16.0423 10.6483 15.7933 10.8209 15.6113C11.185 15.2566 11.8172 15.2566 12.1817 15.6113C12.3539 15.7933 12.4596 16.0423 12.4596 16.2917C12.4596 16.5505 12.3539 16.79 12.1817 16.9721ZM12.4596 12.4584C12.4596 12.9876 12.0305 13.4167 11.5013 13.4167C10.9721 13.4167 10.543 12.9876 10.543 12.4584V6.70835C10.543 6.17912 10.9721 5.75002 11.5013 5.75002C12.0305 5.75002 12.4596 6.17912 12.4596 6.70835V12.4584Z" fill="#F0B400"></path>
+                  </svg>
+                </span>
+                <p class="text-yellow-900">Something went wrong, please try again later</p>
+              </div>
+            </div>
+          </div>
+        
+          {% else %}
+
+          <div class="fixed top-0 left-0 w-full pt-8 pb-10 z-50" style="margin-top: 70px;">
+            <div class="flex px-6 justify-center">
+              <div class="inline-flex py-4 pl-5 pr-6 items-center bg-green-100 border border-green-500 rounded-3xl">
+                <span class="mr-4">
+                  <svg width="21" height="22" viewbox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.5" width="21" height="21" rx="10.5" fill="#219653"></rect>
+                    <path d="M15.7676 8.13463C15.4582 7.82482 14.9558 7.82501 14.646 8.13463L9.59787 13.183L7.35419 10.9393C7.04438 10.6295 6.54217 10.6295 6.23236 10.9393C5.92255 11.2491 5.92255 11.7513 6.23236 12.0611L9.03684 14.8656C9.19165 15.0204 9.39464 15.098 9.59765 15.098C9.80067 15.098 10.0039 15.0206 10.1587 14.8656L15.7676 9.25644C16.0775 8.94684 16.0775 8.44443 15.7676 8.13463Z" fill="white"></path>
+                  </svg>
+                </span>
+                <p class="text-green-800">Your message has been successfully sent</p>
+              </div>
+            </div>
+          </div>
+
+          {% endif %}
+
+      {% endif %}
+
+
+  <section class="relative bg-coolGray-50 overflow-hidden " x-data="{ mobileNavOpen: false }">
+  <div class="container mx-auto px-4">
+    <div class="relative mx-auto mb-12 pt-12 pb-64 xs:pb-40 lg:pb-12 border-b">
+       <h1 class="font-heading text-6xl sm:text-9xl md:text-10xl xl:text-13xl tracking-tightest">We Renovate Houses and Lifestyles</h1>
+       <div class="absolute bottom-0 right-0 mb-10 max-w-sm ml-auto text-right">
+          <span class="block mb-1 text-xs">Since</span>        <span class="block mb-3 text-xs">2018</span>        
+          <p>          <span class="block">Transforming your house into a comfortable and stylish home is our specialty. We are the best home renovation team in Spain.</span>            </p>
+       </div>
+    </div>
+    <div class="flex justify-center">
+       <a class="group inline-flex py-5 px-8 font-medium text-white leading-none items-center justify-center bg-blue-500 rounded-full transition duration-150 bg-black hover:bg-black mb-9" href="{% url 'conversion' %}" style="background-color: brown;">
+          <span class="mr-2.5">Get an Estimate</span>        
+          <span class="group-hover:rotate-45 transform transition duration-100">
+             <svg width="10" height="11" viewbox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 1.5L1 9.5" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M9 8.83571V1.5H1.66429" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+             </svg>
+          </span>
+       </a>
+    </div>
+    <div class="flex flex-wrap -mx-3 align-items-end">
+       <div class="w-full md:w-6/12 lg:w-7/12 px-3 relative">        <img class="block w-full h-64 lg:h-80 rounded-4xl object-cover" src="{% static 'images/general-photo-2.jpg' %}" alt="">      </div>
+       <div class="hidden md:block md:w-6/12 lg:w-5/12 px-3">
+          <div class="flex flex-wrap -mx-3">
+             <div class="w-5/12 px-3">            <img class="block w-full h-64 lg:h-80 rounded-4xl object-cover" src="{% static 'images/bathroom-photo.jpg' %}" alt="">          </div>
+             <div class="w-7/12 px-3">            <img class="block w-full h-64 lg:h-80 rounded-4xl object-cover" src="{% static 'images/kitchen-photo.jpg' %}" alt="">          </div>
+          </div>
+       </div>
+    </div>
+ </div>
+</section>
+                
+                
+      <section class="py-12 md:py-20 bg-coolGray-50" id="services" >
+        <div class="container mx-auto px-4" style="margin-top: 50px;">
+          <div class="max-w-xl mx-auto lg:max-w-none">
+            <h1 class="font-heading text-6xl sm:text-8xl md:text-10xl tracking-tighter mb-20">Discover our Services</h1>
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
+                <div class="max-w-xl">
+                  <button class="group block text-left w-full py-10 px-0 border-b border-coolGray-300" x-data="{ accordion: false }" x-on:click="accordion = !accordion">
+                    <div class="flex w-full justify-between items-center">
+                      <h5 class="text-3xl sm:text-4xl">Home Additions</h5>
+                      <span :class="{'rotate-180': accordion, 'rotate-0': !accordion }" class="inline-block transform">
+                          <span class="flex-shrink-0 ml-4">
+                              <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M19.4961 10.4346L12.9483 3.88682L6.40058 10.4346" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  <path d="M12.9453 22.2246L12.9453 4.06996" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                          </span>
+                      </span>
+                    </div>
+                    <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500">
+                        <div class="max-w-lg mt-8">
+                          <p class="text-xl">Expanding existing structures with new rooms, such as additional bedrooms, sunrooms, or extended living areas.</p>
+                        </div>
+                    </div>
+                  </button>
+                  <button class="group block text-left w-full py-10 px-0 border-b border-coolGray-300" x-data="{ accordion: false }" x-on:click="accordion = !accordion">
+                      <div class="flex w-full justify-between items-center">
+                        <h5 class="text-3xl sm:text-4xl">Kitchen Remodeling</h5>
+                        <span :class="{'rotate-180': accordion, 'rotate-0': !accordion }" class="inline-block transform">
+                            <span class="flex-shrink-0 ml-4">
+                                <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.4961 10.4346L12.9483 3.88682L6.40058 10.4346" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M12.9453 22.2246L12.9453 4.06996" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </span>
+                      </div>
+                      <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500">
+                          <div class="max-w-lg mt-8">
+                            <p class="text-xl">Upgrading cabinetry, countertops, appliances, and layouts to enhance functionality and aesthetics.</p>
+                          </div>
+                      </div>
+                    </button>
+                    <button class="group block text-left w-full py-10 px-0 border-b border-coolGray-300" x-data="{ accordion: false }" x-on:click="accordion = !accordion">
+                      <div class="flex w-full justify-between items-center">
+                        <h5 class="text-3xl sm:text-4xl">Bathroom Renovations</h5>
+                        <span :class="{'rotate-180': accordion, 'rotate-0': !accordion }" class="inline-block transform">
+                            <span class="flex-shrink-0 ml-4">
+                                <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.4961 10.4346L12.9483 3.88682L6.40058 10.4346" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M12.9453 22.2246L12.9453 4.06996" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </span>
+                      </div>
+                      <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500">
+                          <div class="max-w-lg mt-8">
+                            <p class="text-xl">Modernizing fixtures, installing new tiles, and improving plumbing and lighting for a refreshed look.</p>
+                          </div>
+                      </div>
+                    </button>
+                    <button class="group block text-left w-full py-10 px-0 border-b border-coolGray-300" x-data="{ accordion: false }" x-on:click="accordion = !accordion">
+                      <div class="flex w-full justify-between items-center">
+                        <h5 class="text-3xl sm:text-4xl">Exterior Renovations</h5>
+                        <span :class="{'rotate-180': accordion, 'rotate-0': !accordion }" class="inline-block transform">
+                            <span class="flex-shrink-0 ml-4">
+                                <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.4961 10.4346L12.9483 3.88682L6.40058 10.4346" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M12.9453 22.2246L12.9453 4.06996" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </span>
+                      </div>
+                      <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500">
+                          <div class="max-w-lg mt-8">
+                            <p class="text-xl">Enhancing curb appeal through services like siding replacement, roofing upgrades, window installations, and landscaping improvements.</p>
+                          </div>
+                      </div>
+                    </button>
+                    <button class="group block text-left w-full py-10 px-0 border-b border-coolGray-300" x-data="{ accordion: false }" x-on:click="accordion = !accordion">
+                      <div class="flex w-full justify-between items-center">
+                        <h5 class="text-3xl sm:text-4xl">Floor Installation</h5>
+                        <span :class="{'rotate-180': accordion, 'rotate-0': !accordion }" class="inline-block transform">
+                            <span class="flex-shrink-0 ml-4">
+                                <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.4961 10.4346L12.9483 3.88682L6.40058 10.4346" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M12.9453 22.2246L12.9453 4.06996" stroke="black" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </span>
+                      </div>
+                      <div x-ref="container" :style="accordion ? 'height: ' + $refs.container.scrollHeight + 'px' : ''" class="overflow-hidden h-0 duration-500">
+                          <div class="max-w-lg mt-8">
+                            <p class="text-xl">Installing various types of flooring, including hardwood, laminate, tile, and carpet, to improve the look and feel of your home.</p>
+                          </div>
+                      </div>
+                    </button>
+                </div>
+              </div>
+              <div class="w-full lg:w-1/2 px-4">
+                <img class="block mx-auto rounded-4xl lg:mr-0" src="{% static 'images/worker-home-renovation.jpeg' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section class="py-4 bg-coolGray-50">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full lg:w-5/12 px-4 order-last lg:order-first">
+              <img class="block mx-auto w-full h-full rounded-4xl" src="{% static 'images/home-renovation.jpg' %}" alt="">
+            </div>
+            <div class="w-full lg:w-7/12 px-4 py-20 md:py-28">
+              <div class="max-w-md md:max-w-xl xl:max-w-3xl mx-auto lg:mr-0 text-center">
+                <span class="block mb-4 text-sm">We are here to assist you</span>
+                <h1 class="font-heading text-5xl md:text-7xl xl:text-8xl tracking-tighter mb-8">Transform Your Home Today</h1>
+                <div class="max-w-xl mx-auto mb-10">
+                  <p class="text-lg text-coolGray-600">Renovate your home with confidence. Our professional team will guide you through every step of the process to ensure your complete satisfaction.</p>
+                </div>
+                <a class="group inline-flex py-5 px-8 font-medium text-white leading-none items-center justify-center bg-blue-500 rounded-full transition duration-150 bg-black hover:bg-black" href="{% url 'conversion' %}" style="background-color: brown;">
+                  <span class="mr-2.5">Get an Estimate</span>
+                  <span class="group-hover:rotate-45 transform transition duration-100">
+                    <svg width="10" height="11" viewbox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 1.5L1 9.5" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M9 8.83571V1.5H1.66429" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+                
+      <section x-data="{ activeSlide: 1, slideCount: 3 }" >
+        <div class="py-18 md:py-24 px-5 bg-coolGray-50">
+          <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto text-center">
+              <div class="overflow-hidden">
+                  <div :style="'transform: translateX(-' + (activeSlide - 1) * 100.5 + '%)'" class="whitespace-nowrap transition-transform duration-500 ease-in-out">
+                      <div class="inline-block w-full whitespace-normal">
+                          <span class="inline-block mb-10 py-2 px-3 text-sm leading-none border-1.5 border-black group-hover:bg-black group-hover:text-white rounded-full transition duration-200">Kitchen Renovation</span>
+                          <p class="text-xl md:text-2xl lg:text-3xl mb-10">
+                            <span class="italic leading-snug">“Agreformas completely transformed our outdated kitchen into a modern, functional space that we love spending time in. The team was professional, attentive to our needs, and completed the project on time. We couldn't be happier with the results!”</span>
+                          </p>
+                          <div class="flex mb-16 items-center text-left justify-center">
+                            <img class="h-15 w-15 mr-4 rounded-full" src="{% static 'images/person1.jpeg' %}" alt="">
+                            <div>
+                              <span class="block">Maria G</span>
+                              <span class="block text-sm text-coolGray-600">Valencia</span>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="inline-block w-full whitespace-normal">
+                          <span class="inline-block mb-10 py-2 px-3 text-sm leading-none border-1.5 border-black group-hover:bg-black group-hover:text-white rounded-full transition duration-200">Apartament Renovation</span>
+                          <p class="text-xl md:text-2xl lg:text-3xl mb-10">
+                            <span class="italic leading-snug">“From start to finish, Agreformas exceeded our expectations. They revamped our entire house, including the living room, bathrooms, and bedrooms. The quality of their work is outstanding, and their attention to detail is impeccable. Our home feels brand new!”</span>
+                          </p>
+                          <div class="flex mb-16 items-center text-left justify-center">
+                            <img class="h-15 w-15 mr-4 rounded-full" src="{% static 'images/person3.jpeg' %}" alt="">
+                            <div>
+                              <span class="block">Carlos R</span>
+                              <span class="block text-sm text-coolGray-600">Madrid</span>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="inline-block w-full whitespace-normal">
+                          <span class="inline-block mb-10 py-2 px-3 text-sm leading-none border-1.5 border-black group-hover:bg-black group-hover:text-white rounded-full transition duration-200">General Renovations</span>
+                          <p class="text-xl md:text-2xl lg:text-3xl mb-10">
+                            <span class="italic leading-snug">“Choosing Agreformas for our home renovation was the best decision we made. The team was friendly, reliable, and communicated with us every step of the way. Highly recommended!”</span>
+                          </p>
+                          <div class="flex mb-16 items-center text-left justify-center">
+                            <img class="h-15 w-15 mr-4 rounded-full" src="{% static 'images/person2.jpeg' %}" alt="">
+                            <div>
+                              <span class="block">Lucia M</span>
+                              <span class="block text-sm text-coolGray-600">Barcelona</span>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                <button class="inline-flex h-16 sm:h-18 w-16 sm:w-18 mr-6 sm:mr-9 items-center justify-center text-black hover:text-white hover:bg-black border border-black rounded-full transition duration-200" x-on:click="activeSlide = activeSlide &gt; 1 ? activeSlide - 1 : slideCount">
+                  <svg width="27" height="27" viewbox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.7051 7.12817L4.15732 13.6759L10.7051 20.2237" stroke="currentColor" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M22.4941 13.6759H4.33949" stroke="currentColor" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <button class="inline-flex h-16 sm:h-18 w-16 sm:w-18 items-center justify-center text-black hover:text-white hover:bg-black border border-black rounded-full transition duration-200" x-on:click="activeSlide = activeSlide &lt; slideCount ? activeSlide + 1 : 1">
+                  <svg width="27" height="27" viewbox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.2949 7.12817L22.8427 13.6759L16.2949 20.2237" stroke="currentColor" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M4.50586 13.6759H22.6605" stroke="currentColor" stroke-width="1.61806" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+                
+      <section class="py-12 md:py-24 bg-coolGray-50" >
+        <div class="container mx-auto px-4">
+          <h1 class="font-heading text-6xl sm:text-8xl md:text-10xl tracking-tighter mb-20">FAQ</h1>
+          <div class="flex flex-wrap -mx-4 -mb-20">
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-20">
+              <div class="max-w-sm pr-10">
+                <h4 class="text-3xl mb-6">How long will my renovation project take to complete?</h4>
+                <p class="text-lg text-coolGray-600">The timeline depends on the project's scope. After understanding your requirements, we'll provide an estimated start and completion date. We'll keep you informed of any potential delays.</p>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-20">
+              <div class="max-w-sm pr-10">
+                <h4 class="text-3xl mb-6">What is the total cost of my renovation project, and are there any hidden fees?</h4>
+                <p class="text-lg text-coolGray-600">We'll give you a detailed, transparent quote covering all costs, including materials and labor. We aim to avoid surprises, and any unforeseen expenses will be discussed with you before proceeding.</p>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-20">
+              <div class="max-w-sm pr-10">
+                <h4 class="text-3xl mb-6">Can I see examples of your previous work or speak with past clients?</h4>
+                <p class="text-lg text-coolGray-600">Certainly! You can view our <span style="color: brown;"><a href="{% url 'gallery' %}">Gallery</a></span>, and we can provide references from past clients. We're proud of our work and happy to share our previous projects with you.</p>
+              </div>
+            </div>
+            <!-- <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-20">
+              <div class="max-w-sm pr-10">
+                <h4 class="text-3xl mb-6">Why should I invest in wine?</h4>
+                <p class="text-lg text-coolGray-600">During this phase the design is developed to meet the required technical standards to meet building regulations and incorporate sustainability strategies.</p>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-20">
+              <div class="max-w-sm pr-10">
+                <h4 class="text-3xl mb-6">How does wine investing work?</h4>
+                <p class="text-lg text-coolGray-600">During this phase the design is developed to meet the required technical standards to meet building regulations and incorporate sustainability strategies.</p>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-20">
+              <div class="max-w-sm pe-5">
+                <h4 class="text-3xl mb-6">Is investing in wine suitable for me?</h4>
+                <p class="text-lg text-coolGray-600">During this phase the design is developed to meet the required technical standards to meet building regulations and incorporate sustainability strategies.</p>
+              </div>
+            </div> -->
+          </div>
+          
+        </div>
+      </section>
+                
+      <section class="py-12 md:py-20 bg-coolGray-100" id="contact"  >
+        <div class="container mx-auto px-4" style="margin-top: 50px;">
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
+              <div class="max-w-xl mx-auto lg:mx-0">
+                <div class="max-w-lg mb-10">
+                  <h1 class="font-heading text-6xl xs:text-8xl sm:text-9xl xl:text-10xl tracking-tighter mb-8">Get in Touch</h1>
+                  <p class="text-xl text-coolGray-600">We’d love to hear from you! Whether you have questions, need more information, or want to discuss your renovation project, our team is here to help. Please fill out the form below or reach out to us directly. We look forward to connecting with you!</p>
+                </div>
+                <div class="flex flex-wrap -mx-4 mb-20">
+                  <div class="w-full sm:w-1/2 px-4 mb-6 sm:mb-0">
+                    <div class="py-6 text-center border border-coolGray-300 rounded-3xl">
+                      <span class="block mb-2 text-sm text-coolGray-500">Call us</span>
+                      <span class="font-medium">+48 291 821 114</span>
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-1/2 px-4">
+                    <div class="py-6 text-center border border-coolGray-300 rounded-3xl">
+                      <span class="block mb-2 text-sm text-coolGray-500">Email us</span>
+                      <span class="font-medium">contact@example.com</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <span class="block mb-4 text-xl">Our Location</span>
+                  <p class="text-coolGray-600">6811 Benjamin Franklin Drive,</p>
+                  <p class="text-coolGray-600 mb-8">Suite 170Columbia, MD 21046</p>
+                  <!-- <div class="max-w-md rounded-3xl border-2 border-white overflow-hidden">
+                    <img class="block w-full" src="asitrastudio-assets/contacts/map-small.png" alt="">
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2 px-4">
+              <div class="py-12 px-8 md:px-10 bg-white rounded-4xl max-w-xl mx-auto lg:mr-0">
+                <h3 class="text-3xl tracking-tight mb-8">Contact Us</h3>
+                <form action="" method="post">
+                  {% csrf_token %}
+
+                  {{form}}
+
+                  <button class="block w-full py-5 px-8 text-center font-medium text-white leading-none bg-black hover:bg-blue-500 rounded-full transition duration-150" type="submit" style="background-color: brown;">Send message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+
+      {% endblock content %}
